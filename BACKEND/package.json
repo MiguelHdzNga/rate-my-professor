@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "chalk": "^5.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "randomatic": "^3.1.1"
+  },
+  "scripts": {
+    "start": "node ./server.mjs",
+    "dev": "nodemon ./app.mjs"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

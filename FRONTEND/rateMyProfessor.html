@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Unique/90.7.9376.77';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate my professor</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="width: 100%;">Calificando: - Profesor de ejemplo -</h1>
+      <b>Ingeniería</b> ⋅ <a style="color: #424242" href="">Perfil</a>
+    </div>
+
+    <form><br><br><br><br><br><br><br><br>
+        <div class="box">
+        <div style="width:825px;"><h3>Selecciona el código de tu curso *</h3></div>
+           <div class="custom-select">
+            <select required>
+              <option value="" selected disabled hidden>Seleccionar código</option>
+                <option value="">Code1</option>
+                <option value="">Code2</option>
+                <option value="">Code3</option>
+                <option value="">Code4</option>
+                <option value="">Code5</option>
+                <option value="">Code6</option>
+            </select>
+           </div>
+          <div class="center">
+            <input style="cursor: pointer;" type="checkbox"><p><ion-icon style="padding: 0 5px 0 5px;" name="desktop-outline"></ion-icon></p>
+            Este es un curso online
+          </div>
+        </div>
+<br><br>
+
+    <div class="box">
+        <div style="width:825px;"><h3>Califica a tu profesor *</h3></div>
+      <div class="rating">
+        <input type="radio" name="rating" id="rate5" required/><label
+          for="rate5"
+          id="rateLabel5"
+          >5</label
+        >
+        <input type="radio" name="rating" id="rate4" /><label for="rate4"
+          >4</label
+        >
+        <input type="radio" name="rating" id="rate3" /><label for="rate3"
+          >3</label
+        >
+        <input type="radio" name="rating" id="rate2" /><label for="rate2"
+          >2</label
+        >
+        <input type="radio" name="rating" id="rate1" /><label
+          for="rate1"
+          id="rateLabel1"
+          >1</label
+        >
+      </div>
+      <div style="display: flex; justify-content: center; width: 350px;">
+        <p></p>
+         1.- Pésimo
+       </div>
+       <div style="display: flex; justify-content: center; width: 350px;">
+         <p></p>
+          5.- Excelente
+        </div>
+    </div>
+   <br><br>
+
+   <div class="box">
+    <div style="width:825px;"><h3>¿Que tan dificil fue la materia con este profesor? *</h3></div>
+  <div class="inverserating">
+    <input type="radio" name="difficult" id="difficult5" required /><label
+      for="difficult5"
+      id="rateLabel5"
+      >5</label
+    >
+    <input type="radio" name="difficult" id="difficult4" /><label for="difficult4"
+      >4</label
+    >
+    <input type="radio" name="difficult" id="difficult3" /><label for="difficult3"
+      >3</label
+    >
+    <input type="radio" name="difficult" id="difficult2" /><label for="difficult2"
+      >2</label
+    >
+    <input type="radio" name="difficult" id="difficult1" /><label
+      for="difficult1"
+      id="rateLabel1"
+      >1</label
+    >
+  </div>
+  <div style="display: flex; justify-content: center; width: 350px;">
+    <p></p>
+     1.- Muy fácil
+   </div>
+   <div style="display: flex; justify-content: center; width: 350px;">
+     <p></p>
+      5.- Muy difícil
+    </div>
+</div>
+<br><br>
+   <div class="box">
+    <div style="width:825px;"><h3>¿Volverías a tomar clase con este profesor? *</h3></div>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="greencheckmark"  type="radio" name="question1" required>
+    </label>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="redcheckmark"  type="radio" name="question1" >
+    </label>
+  </div>
+  <br><br>
+  <div class="box">
+    <div style="width:825px;"><h3>¿Este profesor usa libros de texto? *</h3></div>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="greencheckmark"  type="radio" name="question2" required>
+    </label>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="redcheckmark"  type="radio" name="question2" >
+    </label>
+  </div>
+  <br><br>
+  <div class="box">
+    <div style="width:825px;"><h3>¿Fue obligatoria la asistencia? *</h3></div>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="greencheckmark"  type="radio" name="question3" required>
+    </label>
+    <label style="margin: 0 30px 0 30px;">
+      <input class="redcheckmark"  type="radio" name="question3" >
+    </label>
+  </div>
+  <br><br>
+  <div class="box">
+    <div style="width:825px;"><h3>Selecciona tu calificación obtenida *</h3></div>
+       <div class="custom-select">
+        <select style="font-size: 20px;" required>
+          <option value="" selected disabled hidden>Seleccionar calificación</option>
+            <option value="">10</option>
+            <option value="">9</option>
+            <option value="">8</option>
+            <option value="">7</option>
+            <option value="">6</option>
+            <option value="">Reprobado</option>
+        </select>
+       </div>
+
+    </div>
+<br><br>
+    <div>
+    <div class="container">
+      <div style="width: 800px"><h3>Selecciona hasta 3 tarjetas *</h3></div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Estricto calificando</span>
+        </label>
+      </div>
+  
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>La participación cuenta</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Accesible fuera de clase</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Buenos criterios para evaluar</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Entrega buena retroalimentación</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Inspiracional</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Mucha tarea</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Simpático</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Exámenes difíciles</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Se preocupa por los estudiantes</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Respetuoso</span>
+        </label>
+      </div>
+   
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="chk"
+            onclick="return limitCheckboxes()"
+          />
+          <span>Muchos exámenes</span>
+        </label>
+      </div>
+      
+    </div>
+      <br><br>
+      <div class="box">
+        <div style="width:825px;"><h3>Escribe una opinión *</h3></div>
+        <div><p style="font-size: 16px; justify-content: left;">Discute las habilidades profesionales del profesor incluyendo el estilo de enseñar, entre otras cosas:</p></div>
+        <textarea class="textarea" maxlength="500" placeholder="¿Qué quieres que otros estudiantes sepan acerca de este profesor?"></textarea>
+        
+      </div>
+      <br><br>
+      <div class="submitBtn">
+        <button type="submit">Enviar calificación</button>
+      </div>
+      <br>
+
+</form>
+    
+
+    <script type="text/javascript">
+      function limitCheckboxes() {
+        var checkboxes = document.getElementsByName("chk");
+        var n = 0;
+      
+        for (let i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked == true) {
+            n++;
+          }
+        }
+
+        if (n > 3) {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
