@@ -2,24 +2,19 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rate my professor</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="styles/estilos.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Rate my professor</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="styles/estilos.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
 </head>
 
 <style>
@@ -91,36 +86,34 @@
   </style>
   
 
-<body style="background-color: #036;font-family: 'Poppins',sans-serif;">
+  <body style="background-color: #036;font-family: 'Poppins',sans-serif;">
 
-
+  
     <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- <a class="navbar-brand" href="home.html"><img src="./images/school.png" alt="Logo" width="70px" />Home</a> -->
-        <a class="navbar-brand" href="home.html">
-          <h3 style="color: #ffff;">Rate my professor</h3>
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        </div>
-    
-        <div>
-          <ul class="navbar-nav">
-    
-            <li style="align-items: right" class="nav-item">
-              <a class="button2" href="#" data-toggle="modal" data-target="#modalSignUp">Register</a>
-            </li>
-            <li style="align-items: right" class="nav-item">
-              <a class="button2" href="#" data-toggle="modal" data-target="#modalLogin">Log in</a>
-            </li>
-    
-          </ul>
-        </div>
-    
-      </nav>
+      <a style="text-decoration: none;" href="home.html"><h2 style="color: #ffff; font-size: 35px; margin-top: 5px;">Rate my professor</h2></a>
+      <!-- <a class="navbar-brand" href="home.html"><img src="./images/school.png" alt="Logo" width="70px" />Home</a> -->
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      </div>
+  
+      <div>
+        <ul class="navbar-nav">
+  
+          <li style="align-items: right" class="nav-item">
+            <a class="button2" href="#" data-toggle="modal" data-target="#modalSignUp">Register</a>
+          </li>
+          <li style="align-items: right" class="nav-item">
+            <a class="button2" href="#" data-toggle="modal" data-target="#modalLogin">Log in</a>
+          </li>
+  
+        </ul>
+      </div>
+  
+    </nav>
     <br>
     <br>
     <br>
@@ -181,6 +174,7 @@
 
 </html>
 
+<!-- modal login -->
 
 <div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalLogin" tabindex="-1" role="dialog"
   aria-labelledby="modalLoginLabel" aria-hidden="true">
@@ -253,6 +247,72 @@
 
 <!-- modal login -->
 
+<div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalLogin" tabindex="-1" role="dialog"
+  aria-labelledby="modalLoginLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div style="padding: 1em" class="modal-content">
+      <div class="modal-header">
+
+        <h3 class="modal-title" id="modalLoginlLabel">
+          <b>Iniciar Sesión</b>
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="email">
+              <h5><b>Email:</b></h5>
+            </label>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+
+              </div>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Ingresa tu correo" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">
+              <h5><b> Contraseña:</b></h5>
+            </label>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+
+              </div>
+              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" />
+            </div>
+
+          </div>
+          <button style="background: #036" onclick="alert('Iniciaste sesión')" type="submit" class="btn btn-primary">
+            Iniciar Sesión
+          </button>
+          <br><br>
+          <div style="display: inline-block">
+            <b> ¿No tienes cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-target="#modalSignUp">
+                Regístrate aquí</a></b>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal login -->
+
 <div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -271,8 +331,8 @@
 
                 <div class="form-group">
                     <div style="display: inline-block">
-                        <b>  ¿Eres un profesor? <a style="color: #036" href="agregarProfesor.html">
-                          - Registrate aquí</a></b>
+                        <b>¿Quieres registrar un profesor?<a style="color: #036" href="agregarProfesor.html">
+                          - Da click aquí</a></b>
                       </div>
                 </div>  
 
@@ -289,22 +349,6 @@
                       
                   </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">
-                      <h6><b> Expediente: </b></h6>
-                    </label>
-  
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                      </div>
-                      <input type="text" class="form-control" id="signIn_exp" placeholder="Ingresa tu expediente" 
-                      title="El expediente está conformado por 6 digitos numéricos" pattern="[0-9]{6,}"
-                      minlength="6" maxlength="6"
-                      required /><br>
-                        
-                    </div>
-                  </div>
 
                 <div class="form-group">
                     <label for="pass">
@@ -347,7 +391,7 @@
                 </button>
                 <br><br>
                 <div style="display: inline-block">
-                 <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-target="#modalLogin">
+                 <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-dismiss="modal" data-target="#modalLogin">
                     Iniciar sesión</a></b>
                 </div>
 

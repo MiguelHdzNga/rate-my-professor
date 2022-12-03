@@ -6,14 +6,19 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="style.css" />
+ 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
 </head>
 
 <style>
+
+  .body{
+    overflow-x: hidden;
+  }
   @font-face {
     font-family: SigmarOne;
     src: url(./Font/SigmarOne-Regular.ttf);
@@ -23,7 +28,7 @@
 
   .navbar {
     background-color: #424242;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .4);
     font-family: SigmarOne;
   }
 
@@ -41,6 +46,7 @@
     color: #FFFFFF;
     text-align: center;
     transition: all 0.15s;
+  
   }
 
   a.button2:hover {
@@ -70,6 +76,8 @@
     font-family: 'Poppins',sans-serif;
   }
 
+
+
   .departments {
     background-color: #036;
     height: 80px;
@@ -84,7 +92,19 @@
     justify-content: center;
     align-items: center;
     font-family: 'Poppins',sans-serif;
+  }
 
+  .box{
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, .4);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+  }
+
+  .box:nth-of-type(even){
+    transform: translateX(-400%);
+  }
+  .box.show{
+    transform: translateX(0);
   }
 </style>
 
@@ -93,10 +113,8 @@
 
 
   <nav class="navbar navbar-expand-lg navbar-light">
+    <a style="text-decoration: none;" href="home.html"><h2 style="color: #ffff; font-size: 35px; margin-top: 5px;">Rate my professor</h2></a>
     <!-- <a class="navbar-brand" href="home.html"><img src="./images/school.png" alt="Logo" width="70px" />Home</a> -->
-    <a class="navbar-brand" href="home.html">
-      <h2 style="color: #ffff;">Rate my professor</h2>
-    </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,7 +148,7 @@
     <div style="width:600px">
       <input type="text" class="letra" id="searchProffesor" placeholder="  Nombre del profesor"
         style="padding: 2px; width: 70%; border-radius: 1rem;" />
-      <button type="button" class="btn btn-primary letra" style="padding: 3px; border-radius: 1rem;">Buscar</button>
+      <button onclick="proffesorsList()" type="button" class="btn btn-primary letra" style="padding: 3px; border-radius: 1rem;">Buscar</button>
     </div>
   </div>
 
@@ -141,12 +159,11 @@
     <div style="padding: 10px;">
       <h2 style="font-size:15px ;color: white">Departments</h2>
       <div class="select letra">
-        <select id="standard-select" style="width:300px;">
-          <option value="Option 1">Physics</option>
-          <option value="Option 2">Chemistry</option>
-          <option value="Option 3">Computer science</option>
-          <option value="Option 4">Science</option>
-          <option value="Option 5">Language</option>
+        <select onchange="selectList()" id="standard-select" style="width:300px;">
+          <option value="">Todos</option>
+          <option value="humanidades">Humanidades</option>
+          <option value="ingenierías">Ingenierías</option>
+          <option value="negocios">Negocios</option>
         </select>
       </div>
     </div>
@@ -164,75 +181,9 @@
 
 
 
-  <div class="profesores">
+  <div class="profesores" id="profesores">
 
-    <!-- Profesor numero uno -->
-    <div style="width: 800px; height: 200px;background-color: white; margin: 15px; border-radius: 10px; display: flex;">
-
-
-      <div style="width: 220px; display: flex;flex-direction: column; justify-content: center; align-items: center;">
-        <p id="" style="font-size:20px">Quality</p>
-        <div
-          style="height: 90px; width:95px;background-color:hsl(0, 72%, 61%);display: flex;justify-content: center; align-items: center;">
-          <p id="calificacion" style="font-size:45px;">2.1</p>
-        </div>
-        <p style="font-size: small; color:#5c5a5a;">5 ratings</p>
-
-      </div>
-
-      <div style="display: flex; flex-direction:column;justify-content:center;width: 40%;">
-        <a href="perfiles.html"><p id="nombreProfesor" style="font-size: 32px; padding:5px;margin-bottom: 1px;">Nicole Pearson</p></a>
-        <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:#5c5a5a">Computer science
-        </p>
-        <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:#5c5a5a">ITESO</p>
-        <div style="display: flex; flex-direction:row">
-          <p id="nivelBarco">N/A</p>
-          <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:hsl(281, 28%, 15%)">level
-            of barco</p>
-          <p style="font-family:Verdana, Geneva, Tahoma, sans-serif">|</p><!-- Signo que separa los datos -->
-          <p id="dificultadNivel">4.3</p>
-          <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:hsl(281, 28%, 15%)">level
-            of difficulty</p>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- Profesor numero dos -->
-    <div style="width: 800px; height: 200px;background-color: white; margin: 15px; border-radius: 10px; display: flex;">
-
-      <div style="width: 220px; display: flex;flex-direction: column; justify-content: center; align-items: center;">
-        <p id="" style="font-size:20px">Quality</p>
-        <div
-          style="height: 90px; width:95px;background-color:hsl(148, 62%, 51%);display: flex;justify-content: center; align-items: center;">
-          <p id="calificacion" style="font-size:45px">4.4</p>
-        </div>
-        <p style="font-size: small; color:#5c5a5a;">5 ratings</p>
-
-      </div>
-
-      <div style="display: flex; flex-direction:column;justify-content:center;width: 40%;">
-        <p id="nombreProfesor" style="font-size: 32px; padding:5px;margin-bottom: 1px;">Pedro Perez</p>
-        <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:#5c5a5a">Computer science
-        </p>
-        <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:#5c5a5a">ITESO</p>
-        <div style="display: flex; flex-direction:row">
-          <p id="nivelBarco">N/A</p>
-          <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:hsl(281, 28%, 15%)">level
-            of barco</p>
-          <p style="font-family:Verdana, Geneva, Tahoma, sans-serif">|</p><!-- Signo que separa los datos -->
-          <p id="dificultadNivel">4.0</p>
-          <p id="materiaProfesor" style="font-size: 10px; padding:5px;margin-bottom: 1px;color:hsl(281, 28%, 15%)">level
-            of difficulty</p>
-        </div>
-      </div>
-
-    </div>
-
-
-
-  </div>
+ </div>
 
 
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -254,6 +205,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+
+    
+    <!-- Script de users -->
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
@@ -302,11 +258,6 @@
             </div>
 
           </div>
-          <div style="display: inline-block; ">
-            <a href="#lost" style="color: #036" data-toggle="modal" data-target="#modalSignUp">
-              <b>¿Olvidaste tu contraseña?</b></a>
-          </div>
-          <br><br>
           <button style="background: #036" onclick="alert('Iniciaste sesión')" type="submit" class="btn btn-primary">
             Iniciar Sesión
           </button>
@@ -348,8 +299,8 @@
 
                 <div class="form-group">
                     <div style="display: inline-block">
-                        <b>  ¿Eres un profesor? <a style="color: #036" href="agregarProfesor.html">
-                          - Registrate aquí</a></b>
+                        <b>¿Quieres registrar un profesor?<a style="color: #036" href="agregarProfesor.html">
+                          - Da click aquí</a></b>
                       </div>
                 </div>  
 
@@ -366,22 +317,6 @@
                       
                   </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">
-                      <h6><b> Expediente: </b></h6>
-                    </label>
-  
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                      </div>
-                      <input type="text" class="form-control" id="signIn_exp" placeholder="Ingresa tu expediente" 
-                      title="El expediente está conformado por 6 digitos numéricos" pattern="[0-9]{6,}"
-                      minlength="6" maxlength="6"
-                      required /><br>
-                        
-                    </div>
-                  </div>
 
                 <div class="form-group">
                     <label for="pass">
@@ -424,7 +359,7 @@
                 </button>
                 <br><br>
                 <div style="display: inline-block">
-                 <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-target="#modalLogin">
+                 <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-dismiss="modal" data-target="#modalLogin">
                     Iniciar sesión</a></b>
                 </div>
 

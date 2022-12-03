@@ -14,14 +14,15 @@ body
 
 .header{
     width: 100%;
-    
     position: fixed;
     left: 0;
-    background: #fff;
-    padding-bottom: 1em;
-    padding-left: 15em;
-    box-shadow: 2px 2px 6px #000;
+    background: #424242;
+    padding-bottom: 1.5em;
+    padding-left: 17em;
+    box-shadow: 2px 4px 6px #000;   
     z-index: 10000;
+    color: #fff;
+ 
 }
 
 select{
@@ -105,8 +106,6 @@ select{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 2px 2px 6px #000;
-    padding: 0 25px 20px;
 }
 
 
@@ -245,9 +244,10 @@ select{
 {
     background: #fff;
     border-radius: 16px;
+    font-size: 20px;
     width: 850px;
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -427,22 +427,19 @@ select{
     align-items: initial;
 }
 
-.submitBtn
+.MyBtn
 {
     border-radius: 16px;
     width: 850px;
-    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 25px 20px;
-    
+    margin-top: 25px;
 }
 
 
 
-.submitBtn button
+.MyBtn button
 {
     padding: 10px 2em;
     font-family: 'Poppins',sans-serif;
@@ -457,7 +454,38 @@ select{
     cursor: pointer;
 }
 
-.submitBtn:hover{
-    opacity: 0.7;
+.MyBtn button:hover{
+    opacity: 0.9;
+    transition: 0.2s;
  
+}
+
+.step{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+
+.step.active{
+    opacity: 1;
+}
+
+.step.finish{
+    background-color: #94AA6D;
+    opacity: 1;
+}
+
+#professorProfile{
+    font-size: 22px;
+
+}
+
+#professorProfile:hover{
+    opacity: 0.6;
 }
