@@ -1,11 +1,11 @@
 import chalk from 'chalk';
 import express, { query } from 'express';
 import mongoose from "mongoose";
-import url from "url";
+//import url from "url";
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import randomize from 'randomatic';
-import path from 'path';
+//import path from 'path';
 
 //const __filename =  url.fileURLToPath(import.meta.url);
 //const __dirname = url.fileURLToPath(new URL(',',import.meta.url));
@@ -20,7 +20,7 @@ app.use(express.json());
 /* app.get('/', (req, res) => {
     console.log(chalk.blue("Entró a la raíz"));
     //res.send('Raíz del sitio');
-    res.sendFile(path.join(__dirname, '../../FRONTEND/home.html'));
+    res.sendFile(path.join(__dirname, '../FRONTEND/home.html'));
 }); */
 
 app.use(cors({
@@ -283,6 +283,7 @@ app.post('/api/postComment', (req, res) => {
                 else {
                     var event = new Date();
                     if (docCom.length == 0) {
+                        //var event = new Date();
                         let newComment = {
                             uid: uid,
                             pid: req.body.pid,
@@ -341,6 +342,27 @@ app.post('/api/postComment', (req, res) => {
                 }
 
             });
+
+            /* let newComment = {
+                uid: uid,
+                pid: req.body.pid,
+                calificacion: req.body.calificacion,
+                dificultad: req.body.dificultad,
+                retomar: req.body.retomar,
+                libros: req.body.libros,
+                asistencia: req.body.asistencia,
+                calificacionObtenida: req.body.calificacionObtenida,
+                tags: req.body.tags,
+                comentario: req.body.comentario
+            };
+            let comment = Comment(newComment);
+            comment.save().then((doc) =>
+                console.log(chalk.green("Usuario creado: ") + doc)
+            );
+            //console.log(docsResponse._uid);
+            res.status(200);
+            res.send("Comentario agregado con exito");
+            return; */
         }
     });
 });

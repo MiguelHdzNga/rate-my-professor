@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+  <script src="scripts/modals.js"></script>
 </head>
 
 <style>
@@ -258,7 +258,7 @@
             </div>
 
           </div>
-          <button style="background: #036" onclick="alert('Iniciaste sesión')" type="submit" class="btn btn-primary">
+          <button style="background: #036" onclick="loginFront()" type="submit" class="btn btn-primary">
             Iniciar Sesión
           </button>
           <br><br>
@@ -354,7 +354,7 @@
 
 
             
-                <button style="background: #036"  type="submit" class="btn btn-primary">
+                <button onclick="signInFront()" style="background: #036"  type="submit" class="btn btn-primary">
                   Continuar
                 </button>
                 <br><br>
