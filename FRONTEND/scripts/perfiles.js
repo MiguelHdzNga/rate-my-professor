@@ -43,6 +43,7 @@ function initData() {
                     currentPage = 1;
                     displayList(comentarios, rows, currentPage);
                     setupPagination(comentarios, pagination, rows);
+                    cursos(comentarios);
                     /* let comentariosString = '',
                         comentariosDOM = document.getElementById('comentarios');
                     comentarios.forEach(commentToHTML)
@@ -66,7 +67,7 @@ function profileHTML(profesor, comentarios) {
         '<div class="col-xs-12 col-sm-8">',
         '<h2>' + profesor.nombre.toUpperCase() + " " + profesor.apellido.toUpperCase() + '</h2>',
         '<p><strong>Departamento: </strong>' + profesor.departamento.toUpperCase() + '</p>',
-        '<p><strong>Cursos: </strong> Algoritmos y programacion, Programacion Estructurada </p>',
+        '<p><strong>Cursos: </strong> ' + cursosToHTML(comentarios) + ' </p>',
         '<p><strong>Top Tags: </strong>',
         tagsToHTML(comentarios),
         '</p>',
@@ -84,7 +85,7 @@ function profileHTML(profesor, comentarios) {
         '</figcaption>',
         '</figure>',
         '<div>',
-        '<a href="rateMyProfessor.html?pid=' + pid + '"><button class="btn btn-primary">Calificar a este profesor</button></a>',
+        '<a ><button onclick="loggued()" class="btn btn-primary">Calificar a este profesor</button></a>',
         '</div>',
         '</div>',
         '</div>',
@@ -98,7 +99,7 @@ function profileHTML(profesor, comentarios) {
         '<p><small>La volveria a cursar</small></p>',
         '</div>',
         '<div class="col-xs-12 col-sm-4 emphasis">',
-        '<h2><strong>' + rating(comentarios, "calificacionObtenida") + '</strong></h2>',
+        '<h2><strong>' + rating(comentarios, "calificacionObtenida") + ' / 10</strong></h2>',
         '<p><small>Promedio de calificaciones</small></p>',
         '</div>',
         '</div>',
@@ -106,6 +107,16 @@ function profileHTML(profesor, comentarios) {
         '</div>',
         '</div>'
     ].join("");
+}
+
+function loggued() {
+    let token = localStorage.getItem('token');
+    if (token) {
+        window.location.href = './rateMyProfessor.html?pid=' + pid;
+    }
+    else {
+        alert('Favor de ingresar un usuario!');
+    }
 }
 
 function rating(comentarios, atributo) {
@@ -177,6 +188,38 @@ function tagsToHTML(comentarios) {
     return htmlString;
 }
 
+function cursos(comentarios) {
+    let tagObject = {};
+    comentarios.forEach(cursoCnt);
+    function cursoCnt(item) {
+        let atribute = "";
+        if (item.cursos.length != 0) {
+            //for (let i = 0; i < item.tags.length; i++) {
+            atribute = item.cursos;
+            tagObject[atribute] = 1
+            //}
+        }
+    }
+    console.log(tagObject)
+    let cursosAtr = Object.keys(tagObject);
+    console.log(cursosAtr);
+
+    return cursosAtr;
+}
+function cursosToHTML(comentarios) {
+    let tagList = cursos(comentarios),
+        htmlString = '';
+    for (let i in tagList) {
+        if (i == 0) {
+            htmlString += tagList[i];
+        }
+        else {
+            htmlString += ', ' + tagList[i];
+        }
+    }
+    return htmlString;
+}
+
 function porcentaje(comentarios) {
     let suma = 0;
     comentarios.forEach(percent);
@@ -214,6 +257,7 @@ function commentTostring(comentario) {
         '<div class="m-2 media-body">',
         '<div class="pull-right"><strong>' + fecha(comentario.fecha) + '</strong></div>',
         '<p>Requiere libro: <strong>' + truefalse(comentario.libros) + '</strong></p>',
+        '<p>Curso en linea: <strong>' + truefalse(comentario.online) + '</strong></p>',
         '<p>Toma asistencia: <strong>' + truefalse(comentario.asistencia) + '</strong></p>',
         '<p><strong>Top Tags: </strong>',
         tagString(comentario),
@@ -276,7 +320,7 @@ function displayList(items, rowsPerPage, pageToDisplay) {
     //userListToHTML(paginatedItems);
     let comentariosString = '',
         comentariosDOM = document.getElementById('comentarios');
-    
+
     paginatedItems.forEach(commentToHTML)
     function commentToHTML(item) {
         comentariosString += commentTostring(item);
@@ -291,7 +335,7 @@ function setupPagination(items, wrapper, rowsPerPage) {
     pagList.classList.add('list-group');
     pagList.classList.add('list-group-horizontal')
 
-    
+
     for (let i = 1; i < pageCount + 1; i++) {
         let element = paginationButton(i, items);
         pagList.appendChild(element);

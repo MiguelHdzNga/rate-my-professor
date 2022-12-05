@@ -15,7 +15,9 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="scripts/perfiles.js"></script>
-  
+
+  <script src="scripts/modals.js"></script>
+
 
 </head>
 
@@ -75,9 +77,11 @@
 
 <body style="background-color: #036;font-family: 'Poppins',sans-serif;">
 
-  
+
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a style="text-decoration: none;" href="home.html"><h2 style="color: #ffff; font-size: 35px; margin-top: 5px;">Rate my professor</h2></a>
+    <a style="text-decoration: none;" href="home.html">
+      <h2 style="color: #ffff; font-size: 35px; margin-top: 5px;">Rate my professor</h2>
+    </a>
     <!-- <a class="navbar-brand" href="home.html"><img src="./images/school.png" alt="Logo" width="70px" />Home</a> -->
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -129,23 +133,24 @@
     <div id="pagination"></div>
   </div>
 
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
 
 
+<!-- modales -->
 
 <div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalLogin" tabindex="-1" role="dialog"
   aria-labelledby="modalLoginLabel" aria-hidden="true">
@@ -173,77 +178,6 @@
 
               </div>
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                placeholder="Ingresa tu correo" required />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="password">
-              <h5><b> Contraseña:</b></h5>
-            </label>
-
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-
-              </div>
-              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required />
-            </div>
-
-          </div>
-          <div style="display: inline-block; ">
-            <a href="#lost" style="color: #036" data-toggle="modal" data-target="#modalSignUp">
-              <b>¿Olvidaste tu contraseña?</b></a>
-          </div>
-          <br><br>
-          <button style="background: #036" onclick="alert('Iniciaste sesión')" type="submit" class="btn btn-primary">
-            Iniciar Sesión
-          </button>
-          <br><br>
-          <div style="display: inline-block">
-            <b> ¿No tienes cuenta?<a style="color: #036" href="#los" data-toggle="modal" data-target="#modalSignUp">
-                Regístrate aquí</a></b>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">
-          Cancelar
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- modal login -->
-
-<div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalLogin" tabindex="-1" role="dialog"
-  aria-labelledby="modalLoginLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div style="padding: 1em" class="modal-content">
-      <div class="modal-header">
-
-        <h3 class="modal-title" id="modalLoginlLabel">
-          <b>Iniciar Sesión</b>
-        </h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-
-          <div class="form-group">
-            <label for="email">
-              <h5><b>Email:</b></h5>
-            </label>
-
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-
-              </div>
-              <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp"
                 placeholder="Ingresa tu correo" />
             </div>
           </div>
@@ -257,11 +191,11 @@
               <div class="input-group-prepend">
 
               </div>
-              <input type="password" class="form-control" id="passwordLogin" placeholder="Ingresa tu contraseña" />
+              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" />
             </div>
 
           </div>
-          <button style="background: #036" onclick="alert('Iniciaste sesión')" type="submit" class="btn btn-primary">
+          <button style="background: #036" onclick="loginFront()" type="submit" class="btn btn-primary">
             Iniciar Sesión
           </button>
           <br><br>
@@ -284,95 +218,93 @@
 
 <!-- modal login -->
 
-<div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div style="padding: 1em" class="modal-content">
-            <div class="modal-header">
-              
-              <h3  class="modal-title" id="modalLoginlLabel">
-                Registro de <b>estudiante</b>
-              </h3>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
+<div class="modal" style="font-family: 'Poppins',sans-serif;" id="modalSignUp" tabindex="-1" role="dialog"
+  aria-labelledby="modalLoginLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div style="padding: 1em" class="modal-content">
+      <div class="modal-header">
 
-                <div class="form-group">
-                    <div style="display: inline-block">
-                        <b>¿Quieres registrar un profesor?<a style="color: #036" href="agregarProfesor.html">
-                          - Da click aquí</a></b>
-                      </div>
-                </div>  
+        <h3 class="modal-title" id="modalLoginlLabel">
+          Registro de <b>estudiante</b>
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
 
-                <div class="form-group">
-                  <label for="email">
-                    <h6><b> Email: </b></h6>
-                  </label>
-
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input type="email" class="form-control" id="signIn_email" placeholder="Ingresa tu correo"
-                    required /><br>
-                      
-                  </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="pass">
-                      <h5><b>Contraseña:</b></h5>
-                    </label>
-  
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                      
-                      </div>
-                      <input type="password" class="form-control" id="signIn_password" placeholder="Contraseña"
-                      pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
-                      title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 caracteres o más"
-             
-                      required /><br>
-                    </div>   
-                  </div>
-
-                  <div class="form-group">
-                    <label for="confirmPass">
-                      <h5><b>Confirmar contraseña:</b></h5>
-                    </label>
-  
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                      
-                      </div>
-                      <input type="password" class="form-control" id="signIn_passwordConfirm"
-                      placeholder="Confirmar contraseña" pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
-                      title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 caracteres o más"
-                   
-                      required /><br>
-                    </div>   
-                  </div>
-
-
-            
-                <button style="background: #036"  type="submit" class="btn btn-primary">
-                  Continuar
-                </button>
-                <br><br>
-                <div style="display: inline-block">
-                 <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-dismiss="modal" data-target="#modalLogin">
-                    Iniciar sesión</a></b>
-                </div>
-
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Cancelar
-              </button>
+          <div class="form-group">
+            <div style="display: inline-block">
+              <b>¿Quieres registrar un profesor?<a style="color: #036" href="agregarProfesor.html">
+                  - Da click aquí</a></b>
             </div>
           </div>
-        </div>
+
+          <div class="form-group">
+            <label for="email">
+              <h6><b> Email: </b></h6>
+            </label>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+              </div>
+              <input type="email" class="form-control" id="signIn_email" placeholder="Ingresa tu correo" required /><br>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pass">
+              <h5><b>Contraseña:</b></h5>
+            </label>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+
+              </div>
+              <input type="password" class="form-control" id="signIn_password" placeholder="Contraseña"
+                pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
+                title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 caracteres o más"
+                required /><br>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPass">
+              <h5><b>Confirmar contraseña:</b></h5>
+            </label>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+
+              </div>
+              <input type="password" class="form-control" id="signIn_passwordConfirm" placeholder="Confirmar contraseña"
+                pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
+                title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 caracteres o más"
+                required /><br>
+            </div>
+          </div>
+
+
+
+          <button onclick="signInFront()" style="background: #036" type="submit" class="btn btn-primary">
+            Continuar
+          </button>
+          <br><br>
+          <div style="display: inline-block">
+            <b> ¿Ya tienes una cuenta?<a style="color: #036" href="#lost" data-toggle="modal" data-dismiss="modal"
+                data-target="#modalLogin">
+                Iniciar sesión</a></b>
+          </div>
+
+        </form>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

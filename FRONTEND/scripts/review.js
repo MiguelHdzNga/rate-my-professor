@@ -18,6 +18,7 @@ function initData() {
       
       alert(xhr.status + ": " + xhr.statusText);
     } else {
+      console.log(xhr.response);
       let professor = JSON.parse(xhr.response);
 
 
@@ -44,14 +45,10 @@ function initData() {
 }
 
 function getAnswers() {
-  // let courseCode = document.getElementById("courseCode").value;
+  let courseCode = document.getElementById("courseCode").value;
   
-  // // alert("Código del curso: " + courseCode.value);
-
-  // let onlineCourse = false;
-  // if(document.getElementById("onlineCourse").checked)
-  // onlineCourse = true;
-
+  let onlineCourse = document.getElementById("onlineCourse").checked;
+ 
   let rateValues = document.getElementsByName("rating");
   let rateNumber = 0;
   for (let i = 0; i < rateValues.length; i++) {
@@ -92,8 +89,8 @@ function getAnswers() {
 
   let body = {
     pid: pid,
-    // cursos: courseCode,
-    // online: onlineCourse,
+    cursos: courseCode,
+    online: onlineCourse,
     calificacion: rateNumber,
     dificultad: difficultyNumber,
     retomar: classAgain,
@@ -108,7 +105,7 @@ function getAnswers() {
   xhr.open("POST", "http://localhost:3000/api/postComment");
 
   xhr.setRequestHeader("content-Type", "application/json");
-  xhr.setRequestHeader("x-user-token", "cI96qkRUxW-637e9c03a97bfc576bdf3ebb");
+  xhr.setRequestHeader("x-user-token", "YP9J7N17IM-637eba43228f2b70f38ceac3");
 
   xhr.send(JSON.stringify(body));
   alert("Registrando usuario...");
@@ -118,6 +115,7 @@ function getAnswers() {
       alert("Usuario registrado exitosamente");
       window.location.href="perfiles.html?pid="+pid;
     } else {
+      window.location.href="perfiles.html?pid="+pid;
       alert("Error: " + xhr.response);
     }
   };
