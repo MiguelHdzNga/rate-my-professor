@@ -35,7 +35,7 @@ function initData() {
       if(professor[0].departamento=='humanidades')
       document.getElementById("courseCode").innerHTML = '<option value="" selected disabled hidden>Selecciona materia</option><option value="Psicología">Psicología</option><option value="Filosofía">Filosofía</option><option value="Derechos Humanos">Derechos humanos</option><option value="Inteligencia Emocional">Inteligencia emocional</option><option value="Ética">Ética</option>'
 
-      if(professor[0].departamento=='ingenierías')
+      if(professor[0].departamento=='ingenierias')
       document.getElementById("courseCode").innerHTML = '<option value="" selected disabled hidden>Selecciona materia</option><option value="Electromagnetismo">Electromagnetismo</option><option value="Estática y Dinámica">Estática y Dinámica</option><option value="Química industrial">Química industrial</option><option value="Cálculo Multivariable">Cálculo Multivariable</option><option value="Álgebra Lineal">Álgebra Lineal</option>'
 
       if(professor[0].departamento=='negocios')
