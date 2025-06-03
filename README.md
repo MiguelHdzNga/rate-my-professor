@@ -82,7 +82,3 @@ FRONTEND/
 ## License
 
 This project is for educational purposes.
-
----
-
-Feel free to improve or expand this README as your project evolves!
