@@ -117,7 +117,8 @@ let commentSchema = mongoose.Schema({
 
 });
 
-let mongoConnection = "mongodb+srv://admin:qLZM8U%40f0nQC@cluster0.gxqdpgm.mongodb.net/test";
+// Replace with your actual MongoDB connection string
+let mongoConnection = "mongodb+srv://<username>:<password>@<cluster-url>/<database>";
 let db = mongoose.connection;
 
 db.on('connecting', () => {
